@@ -1,0 +1,51 @@
+main {
+  display: grid;
+  grid-template-areas:
+    "h h"
+    "s s"
+    "ar as"
+    "f f";
+  width: 60%;
+  gap: 1rem;
+  margin: auto;
+}
+
+header {
+  grid-area: h;
+}
+
+section {
+  grid-area: s;
+}
+
+article {
+  grid-area: ar;
+}
+
+aside {
+  grid-area: as;
+}
+
+footer {
+  grid-area: f;
+}
+
+.jatekter {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+}
+
+.kocka {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kocka > img {
+  display: block;
+  width: 100%;
+  margin: auto auto;
+}
