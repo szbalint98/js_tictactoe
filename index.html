@@ -14,18 +14,21 @@
       </header>
       <section>
         <h2>A játékosok neve</h2>
-        <form>
+        <form id="jatek">
           <div>
-            <label for="j1">Játékos 1</label>
-            <input type="text" name="j1" />
+            <label for="j1">Játékos 1 (O)</label>
+            <input type="text" name="j1" placeholder="rókarudi" />
           </div>
           <div>
-            <label for="j2">Játékos 2</label>
-            <input type="text" name="j2" />
+            <label for="j2">Játékos 2 (X)</label>
+            <input type="text" name="j2" placeholder="rókarudi" />
           </div>
+          <button type="submit" id="letrehoz">Játék kezdése!</button>
         </form>
       </section>
-      <article class="jatekter"></article>
+      <article>
+        <div class="valaszto"></div>
+      </article>
       <aside>
         <h2>A játék állapota</h2>
         <p>Aktuális játékos: <span class="akt_jatekos"></span></p>
