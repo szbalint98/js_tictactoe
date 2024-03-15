@@ -46,7 +46,7 @@ function jatekMenet(meret, lista, formObj) {
           console.log(KOCKA_ELEM[0]);
           nyertAllapot(KOCKA_ELEM, formObj.palya);
         }
-        lepesekAllapot(formObj, vege);
+        lepesekAllapot(formObj, vege, KOCKA_ELEM.length);
       }
     });
   }
@@ -61,24 +61,28 @@ function nyertAllapot(jelenlegi, palya) {
   JATEKTER.innerHTML = txt;
 }
 
-function lepesekAllapot(obj, vege) {
+function lepesekAllapot(obj, vege, dontetlen) {
   const LEPESEK_ELEM = document.querySelector("aside");
-  if (kiJon % 2 === 0) {
-    if (vege) {
-      LEPESEK_ELEM.innerHTML += `<p class="nyero">${obj.j2} nyert!</p>`;
+  if (kiJon !== dontetlen) {
+    if (kiJon % 2 === 0) {
+      if (vege) {
+        LEPESEK_ELEM.innerHTML += `<p class="nyero">${obj.j2} nyert!</p>`;
+      } else {
+        LEPESEK_ELEM.innerHTML += `<p>${kiJon + 1}. lépés: ${
+          obj.j1
+        } következik.</p>`;
+      }
     } else {
-      LEPESEK_ELEM.innerHTML += `<p>${kiJon + 1}. lépés: ${
-        obj.j1
-      } következik.</p>`;
+      if (vege) {
+        LEPESEK_ELEM.innerHTML += `<p class="nyero">${obj.j1} nyert!</p>`;
+      } else {
+        LEPESEK_ELEM.innerHTML += `<p>${kiJon + 1}. lépés: ${
+          obj.j2
+        } következik.</p>`;
+      }
     }
   } else {
-    if (vege) {
-      LEPESEK_ELEM.innerHTML += `<p class="nyero">${obj.j1} nyert!</p>`;
-    } else {
-      LEPESEK_ELEM.innerHTML += `<p>${kiJon + 1}. lépés: ${
-        obj.j2
-      } következik.</p>`;
-    }
+    LEPESEK_ELEM.innerHTML += `<p class="nyero">Döntetlen!</p>`;
   }
 }
 
