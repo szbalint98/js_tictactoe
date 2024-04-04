@@ -145,7 +145,7 @@ function ellenoriz(meret, lista) {
   }
 }
 
-function vizszintes_ell(meret, lista) {
+export function vizszintes_ell(meret, lista) {
   let szoveg = "";
   for (let index = 1; index <= lista.length; index++) {
     szoveg += lista[index - 1];
