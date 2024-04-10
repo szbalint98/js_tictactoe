@@ -36,4 +36,18 @@ function  teszfuggveny() {
         )
 
     }
+    {
+        const LISTA=["A","B","C"]
+        let vart="ABC@"
+        console.assert(
+
+            vart===vizszintes_ell(3,LISTA),
+        "%o",
+        `lista=${LISTA},meret=${3},lnko=${vart}`,
+        "a várt eredmény nem stimmel"
+        )
+
+    }
+    
+    
 }
