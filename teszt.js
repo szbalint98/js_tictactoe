@@ -1,6 +1,6 @@
 import { vizszintes_ell } from "./fuggvenyek.js";
-teszfuggveny();
-function  teszfuggveny() {
+tesztfuggveny();
+export function  tesztfuggveny() {
     {
         const LISTA=[]
         let vart=""
