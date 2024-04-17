@@ -3,7 +3,7 @@ tesztfuggveny();
 export function  tesztfuggveny() {
     {
         const LISTA=[]
-        let vart=""
+        let vart="hdfhgkd"
         console.assert(
 
             vart===vizszintes_ell(3,LISTA),
